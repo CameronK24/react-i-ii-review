@@ -3,14 +3,19 @@
 Answer these on your own, then compare answers as a group
 
 1.  What are props?
+      to customize our components with data values. sent from parent to child
 
 2.  How do you pass props from a parent to a child?
+      when declaring the child in jsx include names of the prop and what its equal to.
 
 3.  How do you access props from a class based child component?
+      class component: this.props.nameOfProp
 
 4.  How do you access props from a functional component?
+      functional component: props.nameOfProp
 
 5.  How do you bind a function to a parent component so that it can be passed to a child?
+      this.function = this.function.bind(this)
 
 ### Understand
 
@@ -64,3 +69,4 @@ Try these on your own, but work together if you start to get stuck.
 Discuss these questions as a group
 
 8.  In the Queue component above, why are we holding state in the Queue component instead of Mentor or Student?
+      Because both children need access to the same state information through the functions being passed as props

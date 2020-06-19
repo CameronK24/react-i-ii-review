@@ -3,16 +3,28 @@
 Answer these on your own, then compare answers as a group
 
 1.  What is state?
+      An object where you store property values that belongs to the component that can changed internally.
 
 2.  Where do you set initial state?
+      In the constructor method after super is called
 
 3.  What method do you use to update state?
+      this.setState
 
 ### Understand
 
 Discuss this question in pairs if you have a 4-person group
 
 4.  Explain what's happening in this component.
+      Importing react and component.
+      initialize class extending component
+      create constructor passing in props and super props
+      create state object inside of it with a value inside
+      bind handleClick to this
+      create function to handle some sort of user input
+      define className, and html elements
+      inside button when its clicked call handleClick
+
 
 ```jsx
 import React, { Component } from "react";
@@ -27,7 +39,7 @@ class LeadMentor extends Component {
 
     this.handleClick = this.handleClick.bind(this);
   }
-  handleClick() {
+  handleClick {
     this.setState({ questionsAnswered: this.state.questionsAnswered + 1 });
   }
   render() {
@@ -54,7 +66,11 @@ Try these on your own, but work together if you start to get stuck.
 Discuss these questions as a group
 
 7.  Could your `Student` component be refactored into a functional component? Why or why not?
+      no, because we need state
 
 8.  What are the pros and cons of using a class method for an event handler vs. using an arrow function inline?
+      Pros: Don't have to bind a function when using an arrow function
+      Cons: Depending on the amount or complexity of the codebase, using arrow functions could make things less readable at first glance.
 
 9.  The render() method is called every time a component's state is updated. For a text input, that means the render method is called for every keypress. Why isn't this bad for performance?
+      Just because render runs doesn't mean the whole DOM (or even part of it) is being rerendered
